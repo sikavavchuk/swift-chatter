@@ -10,18 +10,26 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         ZStack {
-           
-        }
-        
-        VStack {
-            Spacer()
-
-            Image("main-screen-man")
+            Image("main-screen-background")
                 .resizable()
-                .scaledToFit()
-                .frame(width: 300, height: 300)
+                .scaledToFill()
+                .ignoresSafeArea(edges: .all)
+                    
+            VStack {
+                
+                Spacer()
+                
+                HStack {
+                    Image("main-screen-man")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
+                        Spacer()
+                    
+                }
+            }
+            .ignoresSafeArea(edges: .all)
         }
-        .ignoresSafeArea()
     }
 }
 
